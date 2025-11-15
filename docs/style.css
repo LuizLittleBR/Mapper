@@ -1,0 +1,224 @@
+  h1 {
+  font-size: 1.0rem; /* pequeno e suave */
+  font-weight: 700;
+  color: #3ffff5;
+  text-align: center;
+  text-shadow:
+    0 0 3px #78ffd7,
+    0 0 6px #3fff95;
+  margin: 20px 0 15px 0;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+    input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--verde);
+  background-color: #051100; /* fundo escuro mesmo */
+  color: #b6ffb6 !important; /* verde claro forte */
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+  color: #76ff76 !important; /* cor do placeholder */
+  opacity: 1; /* força ele a ficar visível */
+}
+
+
+    #menu-topo {
+      position: sticky;
+      top: 0;
+      background-color: #051100cc;
+      /* fundo semi-transparente */
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+      border-bottom: 2px solid var(--verde);
+      text-decoration: none;
+    }
+    #menu-topo .btn-link {
+  text-decoration: none !important;
+}
+
+
+    :root {
+      --verde: #39ff14;
+      --verde-escuro: #2cca00;
+      --texto: #030303;
+      --fundo: #051100;
+      --sombra: 0 0 12px var(--verde);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #003300);
+      color: var(--texto);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--verde);
+      text-shadow: 0 0 8px var(--verde);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .top-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .btn {
+      background-color: var(--verde);
+      border: none;
+      color: #000;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 12px 20px;
+      transition: 0.3s;
+      user-select: none;
+  text-decoration: none !important;
+
+
+    }
+
+    .btn:hover {
+      background-color: var(--verde-escuro);
+      color: #e0ffe0;
+  text-decoration: none !important;
+
+
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid var(--verde);
+      background: var(--fundo);
+      color: var(--texto);
+      text-align: center;
+    }
+
+    #erro-msg {
+      color: red;
+      margin-top: 8px;
+      font-weight: bold;
+      display: none;
+    }
+
+    #todos-os-mapas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .mapa {
+      background-color: #0b2200;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 10px var(--verde);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .mapa:hover {
+      transform: translateY(-4px);
+    }
+
+    .mapa h3 {
+      color: var(--verde);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      text-shadow: 0 0 5px var(--verde);
+    }
+
+    .mapa img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 15px;
+      border: 3px solid var(--verde);
+      box-shadow: 0 0 20px var(--verde);
+      transition: transform 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .mapa img:hover {
+      transform: scale(1.05);
+    }
+
+    .download-link {
+      display: inline-block;
+      background: var(--verde);
+      color: #000;
+      font-weight: bold;
+      padding: 8px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: var(--sombra);
+    }
+
+    .download-link:hover {
+      background-color: var(--verde-escuro);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 14px;
+      color: #0a0a0a;
+      background-color: #a8ffa8;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--verde);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .download-link {
+        font-size: 13px;
+      }
+
+      .btn {
+        font-size: 13px;
+        padding: 10px 16px;
+        
+        text-decoration: none !important;
+
+      }
+    }
