@@ -1,0 +1,155 @@
+ :root {
+      --verde: #ff14c4;
+      --verde-escuro: #c300ca;
+      --texto: #030303;
+      --fundo: #051100;
+      --sombra: 0 0 12px var(--verde);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #2a0033);
+      color: var(--texto);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #menu-topo {
+      position: sticky;
+      top: 0;
+      background-color: #110010cc;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+      border-bottom: 2px solid var(--verde);
+    }
+
+    #menu-topo a {
+      background-color: var(--verde);
+      border-radius: 12px;
+      padding: 12px 24px;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: var(--sombra);
+      transition: 0.3s;
+      user-select: none;
+    }
+
+    #menu-topo a:hover {
+      background-color: var(--verde-escuro);
+      color: #ffe0fd;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--verde);
+      text-shadow: 0 0 8px var(--verde);
+      margin: 20px 0 40px 0;
+      text-align: center;
+      user-select: none;
+    }
+
+    #todos-os-mapas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .mapa {
+      background-color: #220020;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 10px var(--verde);
+      text-align: center;
+      transition: transform 0.3s;
+      user-select: none;
+    }
+
+    .mapa:hover {
+      transform: translateY(-4px);
+    }
+
+    .mapa h3 {
+      color: var(--verde);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      text-shadow: 0 0 5px var(--verde);
+    }
+
+    .mapa img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 15px;
+      border: 3px solid var(--verde);
+      box-shadow: 0 0 20px var(--verde);
+      transition: transform 0.3s;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .mapa img:hover {
+      transform: scale(1.05);
+    }
+
+    .download-link {
+      display: inline-block;
+      background: var(--verde);
+      color: #000;
+      font-weight: bold;
+      padding: 8px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: var(--sombra);
+      transition: background-color 0.3s ease;
+    }
+
+    .download-link:hover {
+      background-color: var(--verde-escuro);
+      color: #fbe0ff;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 14px;
+      color: #0a0a0a;
+      background-color: #ffa8fb;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--verde);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .download-link {
+        font-size: 13px;
+      }
+
+      #menu-topo a {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+    }
